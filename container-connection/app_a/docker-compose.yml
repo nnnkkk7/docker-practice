@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  app_a:
+    image: golang:latest
+    tty: true
+    networks:
+      - default
+      - shared-network
+  db_a:
+    image: postgres:latest
+
+networks:
+  shared-network:
+    external: true
