@@ -1,12 +1,11 @@
 version: "3"
 services:
-  sample:
-    container_name: sample
+  web:
     build:
       context: .
       dockerfile: ./build/Dockerfile
     volumes:
-      - ./sample:/go/src/github.com/sample
+      - .:/go/src/github.com/sample
     tty: true
     environment:
       - TZ=Asia/Tokyo
